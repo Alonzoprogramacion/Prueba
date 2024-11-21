@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+  <title>Suyisa'SKitty</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/responsive.css">  
+
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+  
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+</head><script>
+  function agregarAlCarrito(nombre, precio, imagen) {
+    
+    const producto = {
+      producto: nombre,
+      precio: precio,
+      imagen: imagen
+    };
+
+    
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    
+    carrito.push(producto);
+
+    
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+
+    alert(`Producto ${nombre} agregado al carrito!`);
+  }
+</script>
+<body>
+  <header>
+    <div class="container-hero">
+      <div class="container hero">
+        <div class="customer-support">
+          
+          <div class="content-customer-support">
+            
+            
+          </div>
+        </div>
+
+        <div class="container-logo">
+          <img src="imagenes/Suisa-removebg-preview.png" id="Mi Foto"  width="100" height="100">
+          <h1 class="logo"><a href="/">Suyisa'SKitty</a></h1>
+        </div>
+
+        <div class="container-user">
+          
+          
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-navbar">
+      <nav class="navbar container">
+        
+        <ul class="menu">
+          
+        <section>
+          <nav class="navbar">
+            <ul>
+              <li>
+                <a href="Paginadeosos.php">Inicio</a></li>
+                <li> <a href="inicio.php">Iniciar Sesion! ✎ ⋆ ☄.</a></li>
+                <li> <a href="carrito2.html">Ver Carrito</a></a></li>
+              <li> <a href="Acercadenosotros.html">Acerca de nosotros</a></li>
+              <li> <a href="#specssss">Contactanos</a></li>
+              
+              
+            </ul>
+          </nav>
+        
+          <script src="scripts.js"></script>
+
+        
+      </nav>
+    </div>
+  </seccion>
+
+</header>
+<a href="Paginadeosos.php" class="suli"><--Regresar</a>
+
+
+<div id="about" class="about">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="about-box">
+          <h2>Kero Frog Deluxe</h2>
+          <h1 >$324.50 MXN</h1>
+        </div>
+        
+          <p><strong>Descripción:
+			<br>Este tierno peluche de Keroppi incluye un mini sapito en brazos, lo que lo hace doblemente adorable. Ideal para los fans de los personajes más tiernos de Sanrio, su suave textura te encantará.<br>
+			<br>Material: Felpa de alta calidad, con relleno de microfibra hipoalergénica. Los ojos y detalles del mini sapo están bordados. <br>
+			<br>Usos: Ideal como peluche de colección, accesorio para decorar habitaciones infantiles o juguete seguro para niños gracias a sus materiales no tóxicos. <br>
+		</strong></p>
+          <button	onclick="agregarAlCarrito('Kero Frog Deluxe', 324.50)"> Carrito!! </button>
+        
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding_rl">
+        <div class="about-box_img">
+          <figure><img src="images/keroppi.jpeg" alt="#" /></figure>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="contact" class="contact">
+  <div class="container">
+   <div class="row">
+     <div class="col-md-12">
+                <div class="titlepage">
+					
+                  <h2>Contactanos<strong class="llow"></strong></h2>
+                </div>
+   </div>
+   <section id ="specssss" >
+</div>
+    <div class="white_color">
+      <div class="row">
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+           <form class="contact_bg">
+            <div class="row">
+              <div class="col-md-12">
+              
+                <div class="col-md-12">
+                  <input class="contactus" placeholder="Tu nombre" type="text" name="Tu nombre">
+                </div>
+                <div class="col-md-12">
+                  <input class="contactus" placeholder="Email" type="text" name="Email">
+                </div>
+                <div class="col-md-12">
+                  <input class="contactus" placeholder="Numero de telefono" type="text" name="Numero de telefono">
+                </div>
+                <div class="col-md-12">
+                  <textarea class="textarea" placeholder="Ocurrio algo? dinos  de inmediato!" type="text" name="Ocurrio algo? Hasnolo saber de inmediato!"></textarea>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                  <button class="send">Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+            </div>
+      
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+<div id="map">
+          </div>
+           </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+</div>
+
+
+
+    <footr>
+      <div class="footer ">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+           
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+              <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 ">
+                  <div class="address">
+                    <h3>Direccion </h3>
+                    <ul class="loca">
+                      <li>
+                        Es un hecho establecido desde hace mucho tiempo, ven y diviertete en Alameda Otay Town Center <br> 📦 Envíos rápidos a todo México. <br>💌 Envíanos un mensaje directo para consultar disponibilidad. <br> Numero de telefono: (+54 1234567890) Email: SuyisaKitty45@gmail.com <br>
+							📦 Métodos de pago: Aceptamos transferencias, depósitos y pagos en efectivo. <br>
+							🚚 Envíos: Llega a tu puerta en 3-5 días hábiles.</li> <br>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="address">
+                          <h3>Redes Sociales</h3>
+                          <ul class="Menu_footer">
+							<li class="active"> <a href="https://x.com/SuyisaSkitty?t=qfMogdQ1F3DyZCcrmPTnpQ&s=09">Twitter</a> </li>
+                            <li><a href="https://www.instagram.com/suyisaskitty?igsh=OThzeGIzaXRlM28w">Instagram</a> </li>
+                            
+                            
+                          </ul>
+                        </div>
+                      </div>
+                     
+
+                      <div class="col-lg-4 col-md-6 col-sm-6 ">
+                        <div class="address">
+                          <h3>Dinos tu opinion</h3>
+                           <form class="news">
+                           <input class="newslatter" placeholder="Escribe tu opinion aqui.." type="text" name=" Escribe tu opinion aqui..">
+                            <button class="submit">Enviar</button>
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="copyright">
+                <div class="container">
+                  <p>Copyright © 2019 derechos reservados de Suyisa'SKitty</p>
+                </div>
+              </div>
+            </div>
+          </footr>
+          
+          <script src="js/jquery.min.js"></script>
+          <script src="js/popper.min.js"></script>
+          <script src="js/bootstrap.bundle.min.js"></script>
+          <script src="js/jquery-3.0.0.min.js"></script>
+          <script src="js/plugin.js"></script>
+          <!-- sidebar -->
+          <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+          <script src="js/custom.js"></script>
+          <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+          <script>
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 11,
+    center: {
+      lat: 40.645037,
+      lng: -73.880224
+    },
+  });
+
+  var image = 'images/maps-and-flags.png';
+  var beachMarker = new google.maps.Marker({
+    position: {
+      lat: 40.645037,
+      lng: -73.880224
+    },
+    map: map,
+    icon: image
+  });
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+
+
+
+</section>
+</body>
+
+</html>

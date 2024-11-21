@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            background-color: #333;
+            color: white;
+        }
+
+        .productos {
+            display: flex;
+            gap: 1em;
+            padding: 1em;
+        }
+
+        .producto {
+            border: 1px solid #ddd;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .carrito {
+            display: none;
+            padding: 1em;
+            border-top: 2px solid #333;
+        }
+
+        button {
+            padding: 0.5em;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tienda Online</h1>
+        <button onclick="mostrarCarrito()">Ver Carrito (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <section class="productos">
+        <div class="producto">
+            <h2>Producto 1</h2>
+            <p>Precio: $10</p>
+            <button onclick="agregarAlCarrito('Producto 1', 10)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <h2>Producto 2</h2>
+            <p>Precio: $20</p>
+            <button onclick="agregarAlCarrito('Producto 2', 20)">Agregar al Carrito</button>
+        </div>
+    </section>
+
+    <section id="carrito" class="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0</span></p>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </section>
+
+    <script>
+        let carrito = [];
+        let total = 0;
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            total += precio;
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            const cartItems = document.getElementById('cart-items');
+            const totalPrice = document.getElementById('total-price');
+            const cartCount = document.getElementById('cart-count');
+
+            cartItems.innerHTML = '';
+            carrito.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${item.nombre} - $${item.precio}`;
+                cartItems.appendChild(li);
+            });
+
+            totalPrice.textContent = total;
+            cartCount.textContent = carrito.length;
+        }
+
+        function mostrarCarrito() {
+            const carritoSection = document.getElementById('carrito');
+            carritoSection.style.display = carritoSection.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function vaciarCarrito() {
+            carrito = [];
+            total = 0;
+            actualizarCarrito();
+        }
+    </script>
+</body>
+</html>
